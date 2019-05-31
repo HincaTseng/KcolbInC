@@ -11,11 +11,11 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface CTest : NSObject
-FOUNDATION_EXPORT int XDunManagerInIt(NSString *cardNum);
+FOUNDATION_EXPORT int XManagerInIt(NSString *cardNum);
 
-FOUNDATION_EXPORT int XDunManagerInItSync(NSString *cardNum);
+FOUNDATION_EXPORT int XManagerInItSync(NSString *cardNum);
 
-FOUNDATION_EXPORT int XDunManagerInItAsync(NSString *cardNum,void(^CellBack)(void));
+FOUNDATION_EXPORT int XManagerInItAsync(NSString *cardNum,void(^CellBack)(void));
 
 FOUNDATION_EXPORT NSString *XGetUserIP();
 @end
