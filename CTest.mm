@@ -13,28 +13,28 @@ typedef void(^TCellBack)(void);
 
 TCellBack g_CellBack = nil;
 
-int XQiSuDunManagerInIt(NSString *cardNum) {
-    return XQiSuDunManagerInItAsync(cardNum,g_CellBack);
+int XManagerInIt(NSString *cardNum) {
+    return XManagerInItAsync(cardNum,g_CellBack);
 }
 
-int XQiSuDunManagerInItSync(NSString *cardNum) {
+int XManagerInItSync(NSString *cardNum) {
      return 1;
 }
 
-int XQiSuDunManagerInItAsync(NSString *cardNum,void(^CellBack)(void)) {
+int XManagerInItAsync(NSString *cardNum,void(^CellBack)(void)) {
     g_CellBack = CellBack;
     
     return 1;
 }
 
-NSString *XQiSuDunGetUserIP() {
+NSString *XGetUserIP() {
 //    auto str = someCMethod();
 //    return [NSString stringWithUTF8String:str];
     return @"这是假的数据";
 }
 
 //这是与C++的调用，判断block指针是不是为空
-void XQiSuDunInitializeCallBacl()
+void XInitializeCallBacl()
 {
     if (g_CellBack != 0) {
         g_CellBack();
